@@ -1,0 +1,137 @@
+body {
+	margin:0;
+	background: #fedc3d;	
+}
+
+h4{
+	color:#13a30c;
+}
+
+h3{
+	color: black;
+}
+
+.header{
+	margin: 0;
+}
+
+.navbar {
+	position: relative;
+	overflow: hidden;
+	background-color:transparent;
+}
+  
+  
+.navbar a{
+	float: left;
+	color: black;
+	text-align: center;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-size: 20px;
+}
+  
+
+.navbar  a:hover {
+	background-color: rgba(12, 12, 12, 0.767);
+	color:white;
+}
+
+  
+.navbar-right {
+	float: right;
+}
+
+.u{
+	cursor: not-allowed;
+	pointer-events: none;
+	font: bold 20px "Droid Sans", arial, sans-serif;
+}
+
+.row {
+	display:flex;
+	flex:flex-wrap;
+	justify-content: space-between;
+}
+
+.main{
+	background:  rgba(255, 255, 255, .5);
+	padding: 2px;
+	font-family:Lucida Calligraphy;
+	flex: 50%;
+	order: 2;
+}
+
+.col{
+	display:flex;
+	flex-direction: row;
+	flex:flex-wrap;
+	justify-content: space-between;
+}
+
+.col1{
+	flex: 33%;
+	order: 1;
+}
+
+.col2{
+	flex: 33%;
+	order: 2;
+}
+
+
+
+.rside {
+	font:normal 20px "Droid Sans", arial, sans-serif;
+	display: block;
+	padding: 10px;
+	flex: 25%;
+	order: 3;
+	color: black;
+	background: rgb(255, 255, 255,0.5);
+}
+
+.lside {
+	font: normal 20px "Droid Sans", arial, sans-serif;
+	padding: 10px;
+	background: rgba(255, 255, 255, .5);
+	flex: 25%;
+	order: 1;
+}
+
+.lt{		
+	color: #FFFFFF;
+	font: normal 20px "Droid Sans", arial, sans-serif;
+	text-align: left;
+	background-color: #13a30c;
+	padding: 5px 5px 5px 5px;
+	border-bottom: #C0C0C0 5px solid;
+}
+
+.login{
+	order: 1;
+	text-align: center;
+	border: black 1px solid;
+}
+
+.footer {
+	padding: 20px;
+	text-align: center;
+	font:bold 15px "camberia";
+}
+
+.con{
+	color: #13a30c;
+}
+
+
+
+.con:hover{
+	color:rgb(241, 0, 0);
+}
+
+@media screen and (min-width: 500px){
+   .row {
+       flex-direction: row;
+   }
+}

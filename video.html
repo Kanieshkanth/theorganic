@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>  
+
+            .ng-binding{
+            color:green;
+            }
+
+            .inputText {  
+                border: 1px solid #ccc;  
+                border-radius: 10px;  
+                background-color: white;  
+                box-shadow: 1px 1px 1px 1px #ccc;  
+                width: 230px;  
+                height: 30px;  
+            }  
+          
+            ul {  
+                list-style: none;  
+                padding: 10px;   
+                border-radius: 10px;  
+                border: 1px solid transparent;  
+                width: 210px;  
+            }  
+      
+            li {  
+                border: 1px solid transparent;  
+                border-right: none;  
+                border-left: none;  
+                padding: 2px;  
+                text-align: center;  
+            }         
+        </style>  
+
+        <script>
+            function function1(){
+                var x = document.getElementById("list");
+                x.style.display = "none";
+                  if(x.style.display = "none"){
+                      x.style.display = "block";
+                  }
+            }
+            function function2(){
+                var y = document.getElementById("list");
+                    y.style.display = "none";
+            }
+        </script>   
+</head>
+<body ng-app ng-init="placesVisited=['Delhi','Kerala','Tamil Nadu','Banglore','Uttar Pradesh','Noida','Haryana','Thrissur'];">
+    <div align="center">
+            <div><br>
+                    <input type="text" onmouseover="function1(this)" id="in"  ng-model="curPlace" class="inputText"/>  
+                    <input type="submit" value="Search" onclick="function2(this)" ng-model="curPlace" ng-href="https://www.google.co.in/webhp?q={{place}}"></a>
+                    
+                    <ul>  
+                        <div style="display:none" id="list">
+                        <li ng-repeat="place in placesVisited | orderBy:place | filter:curPlace" id="lists">  
+                            <a ng-href="https://www.google.co.in/webhp?q={{place}}">{{place}} </a>  
+                        </li>  
+                    </ul>  
+                    </div>
+            </div>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+        <div align="center">
+        <video width="600px" height="500px" autoplay loop>
+           
+            <source src="../vd1.mp4" type="video/mp4">
+           
+        </video>
+    </div>
+    </div>  
+</body>
+</html>

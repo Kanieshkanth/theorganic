@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="icon"  type="image/png" href ="images/tl.png">
+	<title>Organic Farming -  the healthy life</title>
+	<link rel="stylesheet" href="css\news_scroll.css" type="text/css">
+	<link rel="stylesheet" href="css\indexstyle.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js\jquery-3.4.1.min.js"></script>
+	<script src="js/indexscript.js"></script>
+	<script src="js/Login.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="header">
+	<table rowspan="4" style="width: 100%">
+		<tr colspan="1">
+		
+		<td>
+		<img src="images\logo.png" alt="theorganic">
+		</td>
+		
+		<td align="center">
+		<div id="head2">
+		</div>
+		</td></tr></table>
+
+		<script type="text/javascript">
+    		intervalTimer=window.setInterval(we,10000);
+   				function we(){
+
+					var city = "Coimbatore,IN";
+					var key ='81fcf1071fb0230b8dda983ec1fb0ca7';
+
+					$.ajax({
+
+					url:'http://api.openweathermap.org/data/2.5/weather',
+					dataType:'json',
+					type:'GET',
+					data:{q:city, appid: key, units:'metric'},
+
+					success:function(data){
+					var wf='';
+						
+						$.each(data.weather, function(index,val){
+							wf += '<h3><b>' + data.name + "</h3></b><h4>" +
+							data.main.temp + '&deg;C' + '|' + val.main + "," + val.description +"</h4>" ;
+
+						});
+						
+						$("#head2").html(wf);
+					}
+				})
+        	}
+			window.addEventListener("load",we,false);
+		</script>
+</div>
+
+<div class="row">
+	<div class="lside" id="left">
+	</div>
+
+	<div class="main" id="main">
+	
+	</div>
+
+	<div class="rside">
+		<div class="column">
+			<div class= login id="ls">
+				<form action="php\validation.php" method="POST" class="form1">
+					<div class="lt">
+							Let's do !
+					</div>
+					<br>
+					<input size="30px" type="text" name="name" placeholder="Username" required>
+					<br><br>
+					<input size="30px" type="password" name="password" placeholder="Password" required>
+					<br><br>
+					<input type="submit" value="Login">
+					<input type="reset" value="Reset">
+					<p class="tt">Not Registered? <a href="#" id="signup">Create an account</a></p>
+				</form>
+				<form action="php\signup.php" method="POST" class="form2">
+					<div class="lt">
+							Start with Us !
+					</div>
+					<br>
+					<input size="30px" type="text" name="name" id="name" placeholder="Name" required>
+					<br><br>
+					<input size="30px" type="email" name="email" id="email" placeholder="Email" required>
+					<br><br>
+					<input size="30px" type="password" name="password" id="rpassword" placeholder="Password" required>
+					<br><br>
+					<input size="30px" type="password" name="password" id="rcpassword" placeholder="Confirm Password" required>
+					<br><br>
+					<input type="submit" value="Signup" onclick="return check()">
+					<input type="reset" value="Reset">
+					<p class="tt">Already have an account! <a href="#" id="login">Login</a></p>
+				</form>
+				<form action="subcribe.php" method="POST" name="form" ng-app>
+						<div class="lt">
+									Subscribe to Newsletter !
+						</div><br>
+						<div class="control-group" ng-class="{true: 'error'}[submitted && form.email.$invalid]">
+								<div class="controls" style="color: red ; font: normal 15px small-caps">
+									<input type="email" name="email" ng-model="email" placeholder="Enter your email" required />
+									<span class="help-inline" ng-show="submitted && form.email.$error.required"> Required !</span>
+									<span class="help-inline" ng-show="submitted && form.email.$error.email"> Invalid email !</span>
+								</div>
+						</div>
+						<br>
+					  <input type="submit" class="btn btn-primary btn-large" value="Subscribe" ng-click="submitted=true">
+				<p class="tt">You will receive our updates !</p>
+
+				</form>
+			</div>
+			<br>
+			<div class="login2">
+				<div class="lt">
+						Portfolio
+				</div>
+				<div class="slideshow">
+						
+					<div>
+						<img src="images\sl2.jpg" alt="ss">
+					</div>
+					<div>
+						<img src="images\sl3.jpg" alt="sv">
+					</div>
+					<div>
+						<img src="images\sl4.jpg" alt="sv">
+					</div>
+					<div>
+						<img src="images\sl5.jpg" alt="sv">
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+		&copy; 2020 | theorganic.com | <a href="contact.html" class="con">get in touch with us</a>  
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</body>
+</html>

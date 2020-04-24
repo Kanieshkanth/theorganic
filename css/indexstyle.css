@@ -1,0 +1,179 @@
+body {
+	margin:0;
+	background: #fedc3d;	
+}
+
+.header{
+	margin: 0;
+}
+
+h3{
+	color: black;
+}
+
+h4{
+	color:#13a30c;
+}
+
+.head2{
+	color: black; 
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+	font-size: 15px ; 
+	font: bold;
+}
+
+.row {
+	display:flex;
+	flex:flex-wrap;
+	justify-content: space-between;
+}
+
+.column{
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.main {
+	background:  rgba(255, 255, 255, .5);
+	padding: 10px;
+	flex: 50%;
+	order: 2;
+}
+
+.rside {
+	font:normal 20px "Droid Sans", arial, sans-serif;
+	display: block;
+	padding: 10px;
+	flex: 25%;
+	order: 3;
+	color: black;
+	background: rgb(255, 255, 255,0.5);
+}
+
+.lside {
+	font: normal 20px "Droid Sans", arial, sans-serif;
+	padding: 10px;
+	background: rgba(255, 255, 255, .5);
+	flex: 25%;
+	order: 1;
+}
+
+.login{
+	order: 1;
+	text-align: center;
+	border: black 1px solid;
+}
+
+.login2{
+	order: 1;
+	text-align: center;
+	margin: 40px auto;
+	border: black 1px solid;
+}
+
+.lt{		
+	color: #FFFFFF;
+	font: normal 20px "Droid Sans", arial, sans-serif;
+	text-align: left;
+	background-color: #13a30c;
+	padding: 5px 5px 5px 5px;
+	border-bottom: #C0C0C0 5px solid;
+}
+
+.controls{
+	color: red;
+	font-size: 10px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.slideshow{
+	order: 2;
+	align-items: flex-end;
+	/*margin: 70px auto;*/
+	position: relative;
+	width: 340px;
+	height: 280px;
+	padding: 10px;
+	padding-bottom: 5px;
+}
+
+.slideshow > div {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+  }
+
+
+
+input[type="text"]
+{
+	font-size: 15px;
+	font-family: Cambria;
+}
+
+input[type="password"]
+{
+	font-size: 15px;
+	font-family: Cambria;
+}
+
+input[type="email"]
+{
+	font-size: 15px;
+	font-family: Cambria;
+}
+
+input[type="submit"]
+{
+	cursor: pointer;
+	color:white;
+	background-color: #13a30c;
+	border: black 1px solid;
+	font-size: 15px;
+	font-family: Cambria;
+}
+
+
+input[type="reset"]
+{
+	cursor: pointer;
+	color:white;
+	border: black 1px solid;
+	background-color: #13a30c;
+	font-size: 15px;
+	font-family: Cambria;
+}
+
+input[type="date"]
+{
+	font-family: cambria;
+	font-size: 15px;
+}
+
+.form2{
+	display: none;
+}
+
+.footer {
+	padding: 20px;
+	text-align: center;
+	font:bold 15px "camberia";
+}
+
+.con{
+	color: #13a30c;
+}
+
+.con:hover{
+	color:rgb(241, 0, 0);
+}
+
+@media screen and (max-width: 500px){
+	.row{
+		flex-direction: row;
+	}
+}
